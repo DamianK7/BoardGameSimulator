@@ -1,4 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿public class Player
+{
+    public string Name{ get; set; }
+    public string Position { get; set; }
+    public string Score { get; set; }
+    
+}
 
 internal class Program
 {
