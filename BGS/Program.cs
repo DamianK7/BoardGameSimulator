@@ -101,6 +101,71 @@ public class Game
     {
         if (humanPlayer.Name != "Wojownik") players.Add(new Player("Wojownik"));
         if (humanPlayer.Name != "Mag") players.Add(new Player("Mag"));
-        if (humanPlayer.Name != "Healer") players.Add(new Player("Uzdrowiciel"));
+        if (humanPlayer.Name != "Healer") players.Add(new Player("Healer"));
+    }
+
+    public void Start()
+    {
+        Console.WriteLine("Gra rozpoczyna się!");
+        bool gameFinished = false;
+        while (!gameFinished)
+        {
+            foreach (var player in players)
+            {
+                Console.WriteLine($"Tura gracza: {player.Name}");
+
+                int roll = player == humanPlayer ? RollDiceHuman() : dice.Next(1, 7);
+                Console.WriteLine($"{player.Name} rzuca kostką i wyrzuca {roll}.");
+                player.Move(roll);
+
+                if (player.Position >= board.Size)
+                {
+                    player.Position = board.Size - 1;
+                    if (winner == null) winner = player;
+                    gameFinished = true;
+                }
+
+                Console.WriteLine($"{player.Name} przesuwa się na pozycję {player.Position}.");
+
+                int reward = board.GetReward(player.Position);
+                if (reward > 0)
+                {
+                    Console.WriteLine($"{player.Name} zbiera nagrodę: {reward} punktów!");
+                    player.UpdateScore(reward);
+                }
+                else
+                {
+                    Console.WriteLine($"{player.Name} nie znajduje niczego.");
+                }
+
+                Console.WriteLine($"{player.Name} ma teraz {player.Score} punktów.");
+                Console.WriteLine();
+            }
+        }
+
+        DisplayResults();
+    }
+
+    private int RollDiceHuman()
+    {
+        Console.WriteLine("Naciśnij Enter, aby rzucić kostką.");
+        Console.ReadLine();
+        return dice.Next(1, 7);
+    }
+
+    private void DisplayResults()
+    {
+        Console.WriteLine("Koniec gry! Oto wyniki:");
+
+        players.Sort((p1, p2) => p2.Position.CompareTo(p1.Position));
+
+        for (int i = 0; i < players.Count; i++)
+        {
+            var player = players[i];
+            string miejsce = i == 0 ? "Zwycięzca" : $"{i + 1} miejsce";
+            Console.WriteLine($"{miejsce}: {player.Name} - {player.Score} pkt");
+        }
+
+        Console.WriteLine($"\nZwycięzcą jest {winner.Name}, który dotarł pierwszy na metę!");
     }
 }
