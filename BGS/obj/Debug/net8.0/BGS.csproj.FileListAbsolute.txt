@@ -1,0 +1,15 @@
+C:\Users\Damian\RiderProjects\BGS\BGS\bin\Debug\net8.0\BGS.exe
+C:\Users\Damian\RiderProjects\BGS\BGS\bin\Debug\net8.0\BGS.deps.json
+C:\Users\Damian\RiderProjects\BGS\BGS\bin\Debug\net8.0\BGS.runtimeconfig.json
+C:\Users\Damian\RiderProjects\BGS\BGS\bin\Debug\net8.0\BGS.dll
+C:\Users\Damian\RiderProjects\BGS\BGS\bin\Debug\net8.0\BGS.pdb
+C:\Users\Damian\RiderProjects\BGS\BGS\obj\Debug\net8.0\BGS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\RiderProjects\BGS\BGS\obj\Debug\net8.0\BGS.AssemblyInfoInputs.cache
+C:\Users\Damian\RiderProjects\BGS\BGS\obj\Debug\net8.0\BGS.AssemblyInfo.cs
+C:\Users\Damian\RiderProjects\BGS\BGS\obj\Debug\net8.0\BGS.csproj.CoreCompileInputs.cache
+C:\Users\Damian\RiderProjects\BGS\BGS\obj\Debug\net8.0\BGS.sourcelink.json
+C:\Users\Damian\RiderProjects\BGS\BGS\obj\Debug\net8.0\BGS.dll
+C:\Users\Damian\RiderProjects\BGS\BGS\obj\Debug\net8.0\refint\BGS.dll
+C:\Users\Damian\RiderProjects\BGS\BGS\obj\Debug\net8.0\BGS.pdb
+C:\Users\Damian\RiderProjects\BGS\BGS\obj\Debug\net8.0\BGS.genruntimeconfig.cache
+C:\Users\Damian\RiderProjects\BGS\BGS\obj\Debug\net8.0\ref\BGS.dll
