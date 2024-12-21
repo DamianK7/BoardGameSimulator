@@ -169,3 +169,11 @@ public class Game
         Console.WriteLine($"\nZwycięzcą jest {winner.Name}, który dotarł pierwszy na metę!");
     }
 }
+internal class Program
+{
+    public static void Main(string[] args)
+    {
+        Game game = new Game(20);
+        game.Start();
+    }
+}
